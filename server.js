@@ -5,6 +5,7 @@ const wkhtmltopdf = require('node-wkhtmltopdf');
 var fs = require('fs');
 var path = require('path');
 
+var port = process.env.PORT || 8080;
 
 // app.get('/pdfdownload', function (req, res) {
 //
@@ -35,6 +36,6 @@ app.get('/', function(req, res) {
 });
 
 //start the server
-app.listen(1234, function () {
-    console.log('Express server started on port 1234');
+app.listen(port, function () {
+    console.log('Express server started on port 8080');
 });
