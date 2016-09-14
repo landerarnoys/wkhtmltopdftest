@@ -14,7 +14,7 @@ app.get('/pdfdownload', function (req, res) {
         '--custom-header Accept-Language fr-CA',
     ];
 
-    var url = 'https://www.tweakers.net';
+    var url = 'http://www.google.com';
 
     const doc = wkhtmltopdf(options, url);
 
