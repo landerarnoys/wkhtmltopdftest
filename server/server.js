@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 require('../server/httpHandlers')(app);
 
 //get the pdf route
-app.get('/pdfdownload', function (req, res) {
+app.post('/pdfdownload', function (req, res) {
 
     var data = {
         "id": "ce835465c3f2434bbd6ee88f84cf0811",
