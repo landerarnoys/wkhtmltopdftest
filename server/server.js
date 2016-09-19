@@ -948,7 +948,8 @@ app.get('/pdfdownload', function (req, res) {
     return res.writeHead(200, {
         'Content-Type': 'application/pdf',
         'Access-Control-Allow-Origin': '*',
-        'Content-Disposition': 'inline; filename="test.pdf"',
+        'charset': 'utf-8'
+        // 'Content-Disposition': 'inline; filename="test.pdf"',
     });
 
 });
