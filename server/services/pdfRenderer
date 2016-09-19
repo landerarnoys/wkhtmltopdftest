@@ -1,0 +1,28 @@
+'use strict';
+
+var wkhtmltopdf = require('node-wkhtmltopdf');
+var Handlebars = require('handlebars');
+
+module.exports = {
+    render: render
+};
+
+function render(data){
+
+    var template = require('../views/pdfTemplate.hbs')
+    var data = { "name": "Alan", "hometown": "Somewhere, TX",
+        "kids": [{"name": "Jimmy", "age": "12"}, {"name": "Sally", "age": "4"}]};
+    var result = template(data);
+
+    const options = [
+        '--margin-bottom 10',
+        '--margin-left 10',
+        '--margin-right 10',
+        '--margin-top 10',
+    ];
+
+    const doc = wkhtmltopdf(options, result);
+
+    console.log(doc)
+    return doc;
+}
