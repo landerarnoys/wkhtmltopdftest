@@ -21,7 +21,7 @@ function render(data, type){
     ];
 
     const doc = wkhtmltopdf(options, result);
-    return doc ;
+    return doc;
 }
 
 function getTemplate(type) {
